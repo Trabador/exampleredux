@@ -1,0 +1,9 @@
+.Player{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.PlayerPhoto{
+    width: 100px;
+    height: 100px;
+}

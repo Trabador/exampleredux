@@ -1,0 +1,9 @@
+.Substitute{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.SubstitutePhoto{
+    width: 100px;
+    height: 100px;
+}

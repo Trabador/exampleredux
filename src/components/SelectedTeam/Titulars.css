@@ -1,0 +1,9 @@
+.Titular{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.TitularPhoto{
+    width: 100px;
+    height: 100px;
+}
