@@ -27,3 +27,10 @@ export const removeSubstitute = (player) => {
         payload: player
     }
 }
+
+export const populatePlayers = (players) => {
+    return {
+        type: Actions.POPULATE_PLAYERS,
+        payload: players
+    }
+}

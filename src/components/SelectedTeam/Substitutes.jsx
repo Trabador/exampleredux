@@ -12,7 +12,7 @@ const Substitutes = ({ substitutes, removeSubstitute }) => {
                     return (
                         <article key={substitute.id} className='Substitute'>
                             <div>
-                                <img className='SubstitutePhoto' src={substitute.photo} alt={substitute.name}/>
+                                {/* <img className='SubstitutePhoto' src={substitute.photo} alt={substitute.name}/> */}
                                 <button onClick={ () => removeSubstitute(substitute) }>X</button>
                             </div>
                             <p>{substitute.name}</p>

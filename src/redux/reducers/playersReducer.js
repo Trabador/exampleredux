@@ -1,7 +1,7 @@
 import Actions from '../actions/ActionTypes'
 
 const initialState = {
-    players: [
+    /* players: [
         {
             id: 1,
             name: 'RX 78 2',
@@ -18,7 +18,8 @@ const initialState = {
             photo: 'https://i.ebayimg.com/images/g/hMUAAOSwLs9aXHJT/s-l300.jpg'
         },
         
-    ],
+    ], */
+    players: [],
     titulars: [],
     substitutes: []
 }
@@ -44,10 +45,15 @@ const playersReducer = (state = initialState, { type, payload }) => {
                 titulars: state.titulars.filter(titular => titular.id !== payload.id)
             }
         case Actions.REMOVE_SUBSTITUTE:
-            return{
+            return {
                 ...state,
                 players: [...state.players, payload],
                 substitutes: state.substitutes.filter(substitute => substitute.id !== payload.id)
+            }
+        case Actions.POPULATE_PLAYERS:
+            return {
+                ...state,
+                players: payload
             }
         default: 
             return state

@@ -12,7 +12,7 @@ const Titulars = ({ titulars, removeTitular }) => {
                     return (
                         <article key={titular.id} className='Titular'>
                             <div>
-                                <img className='TitularPhoto' src={titular.photo} alt={titular.name}/>
+                                {/* <img className='TitularPhoto' src={titular.photo} alt={titular.name}/> */}
                                 <button onClick={ () => removeTitular(titular) }>X</button>
                             </div>
                             <p>{titular.name}</p>

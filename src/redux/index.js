@@ -1,1 +1,2 @@
-export { addTitular, addSubstitue, removeTitular, removeSubstitute } from './actions/Actions'
+export * from './actions/Actions'
+export * from './actions/fetchActions'

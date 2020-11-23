@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { addTitular, addSubstitue } from '../../redux/index'
 import './TeamList.css'
 
-const TeamList = ({ players, addTitular, addSubstitute }) => {
+const TeamList = ({ players, addTitular, addSubstitute, fetchUsers }) => {
     return (
         <div>
             <h2>Players</h2>
@@ -11,7 +11,7 @@ const TeamList = ({ players, addTitular, addSubstitute }) => {
                 players.map(player => {
                     return (
                         <article key={player.id} className='Player'>
-                            <img className='PlayerPhoto' src={player.photo} alt={player.name}/>
+                            {/* <img className='PlayerPhoto' src={player.photo} alt={player.name}/> */}
                             <h3>{player.name}</h3>
                             <div>
                                 <button onClick={ () => addTitular(player) }>Titulars</button>
@@ -33,7 +33,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addTitular : (player) => {
+        addTitular: (player) => {
             dispatch(addTitular(player))
         },
         addSubstitute: (player) => {
